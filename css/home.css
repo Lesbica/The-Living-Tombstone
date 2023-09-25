@@ -1,0 +1,207 @@
+html {
+    height: 100%;
+    width: 100%;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+  }
+  /* navbar */
+
+.navbar {
+    position: relative;
+    background-color: #FF9901;
+    height: 135px;
+}
+
+/* Фонове зображення */
+.navbar-background {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 92px;
+    background-image: url('wave.png'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Стилі для списку навігації */
+.navbar-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.navbar-list .navbar-item {
+    display: inline-block;
+    margin-right: 107px;
+    margin-bottom: 53px;
+}
+
+.navbar-title {
+    color: #1B1D1F;
+    font-family: Montserrat;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 0;
+}
+
+.navbar-list .navbar-item:last-child {
+    margin-right: 0;
+}
+
+.navbar-item:hover{
+    text-decoration: underline;
+}
+
+.navbar-list .navbar-link {
+    text-decoration: none;
+    color: #000;
+    font-family: Montserrat;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+  /* main */
+
+.group-title {
+    color: #1B1D1F;
+    font-family: Montserrat;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 0;
+  }
+  
+  .group-descr {
+    color: #1B1D1F;
+    font-family: Montserrat Alternates;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  
+  .group-page {
+    background: url("mainphoto.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+  }
+  
+  .wrapper {
+    width: 1170px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .group-text-container {
+    border-radius: 40px;
+    background: #FFF;
+    padding-left: 60px;
+    padding-top: 60px;
+    padding-right: 60px;
+    padding-bottom: 60px;
+    box-sizing: border-box;
+    width: 811px;
+    margin-left: 525px;
+    margin-right: 24px;
+    margin-top: 27px;
+  }
+
+/* footer */
+
+footer {
+    background-color: #FF9901;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.left-column .img-logo {
+    max-width: 229px;
+    padding-top: 50px;
+    padding-left: 32px;
+    padding-bottom: 107px;
+    padding-right: 341px;
+}
+
+.footer-columns {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.column {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.footer-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.column h4 {
+    font-size: 16px;
+}
+
+.bottom-image{
+    width: 100%;
+    height: 215px;
+    background-image: url('triangle.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.footer-title{
+    color: #FF6B01;
+    font-family: Montserrat;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.footer-item {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding-bottom: 19px;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: #000;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.footer-item:hover{
+    text-decoration: underline;
+}

@@ -1,0 +1,256 @@
+html {
+    height: 100%;
+    width: 100%;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+  }
+  /* navbar */
+
+.navbar {
+    position: relative;
+    background-color: #FF9901;
+    height: 135px;
+}
+
+/* Фонове зображення */
+.navbar-background {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 92px;
+    background-image: url('wave.png'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Стилі для списку навігації */
+.navbar-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.navbar-list .navbar-item {
+    display: inline-block;
+    margin-right: 107px;
+    margin-bottom: 53px;
+}
+
+.navbar-title {
+    color: #1B1D1F;
+    font-family: Montserrat;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 0;
+}
+
+.navbar-list .navbar-item:last-child {
+    margin-right: 0;
+}
+
+.navbar-item:hover{
+    text-decoration: underline;
+}
+
+.navbar-list .navbar-link {
+    text-decoration: none;
+    color: #000;
+    font-family: Montserrat;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+  /* main */
+  
+  .group-page {
+    background-image: url("group.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 1170px;
+    margin-top: 0;
+    background-attachment: fixed;
+  }
+  
+.wrapper {
+    width: 1170px;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    position: relative;
+}
+
+.group-text-container-1 {
+    width: 591px;
+    height: 341px;
+    flex-shrink: 0;
+    border-radius: 45px 0px;
+    background: rgba(255, 153, 1, 0.87);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    margin-left: 685px;
+    margin-top: 115px;
+    box-sizing: border-box;
+  }
+  
+.group-text-container-2{
+    width: 349px;
+    height: 341px;
+    transform: rotate(-0.438deg);
+    flex-shrink: 0;
+    border-radius: 70px 0px;
+    background: rgba(255, 107, 1, 0.87);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    margin-top: 478px;
+    margin-left: 85px;
+    box-sizing: border-box;
+}
+
+.group-text-container-3 {
+    width: 483px;
+    height: 274px;
+    flex-shrink: 0;
+    border-radius: 0px 45px;
+    background: rgba(255, 182, 72, 0.87);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    margin-top: 607px;
+    margin-left: 778px;
+    box-sizing: border-box;
+}
+  
+  .group-carer-1 {
+    color: #1B1D1F;
+    text-align: center;
+    font-family: Montserrat Alternates;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    margin-left: 14px;
+    margin-right: 15px;
+  }
+
+  .group-carer-2 {
+    color: #1B1D1F;
+    text-align: center;
+    font-family: Montserrat Alternates;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    margin-left: 13.11px;
+    padding-top: 15.04px;
+    margin-bottom: 14.1px;
+  }
+
+  .group-carer-3 {
+    color: #1B1D1F;
+    text-align: center;
+    font-family: Montserrat Alternates;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+
+/* footer */
+
+footer {
+    background-color: #FF9901;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.left-column .img-logo {
+    max-width: 229px;
+    padding-top: 50px;
+    padding-left: 32px;
+    padding-bottom: 107px;
+    padding-right: 341px;
+}
+
+.footer-columns {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.column {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.footer-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.column h4 {
+    font-size: 16px;
+}
+
+.bottom-image{
+    width: 100%;
+    height: 215px;
+    background-image: url('triangle.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.footer-title{
+    color: #FF6B01;
+    font-family: Montserrat;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.footer-item {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding-bottom: 19px;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: #000;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.footer-item:hover{
+    text-decoration: underline;
+}
