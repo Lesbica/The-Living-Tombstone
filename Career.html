@@ -15,9 +15,10 @@
         <!-- Вміст навбару -->
         <h2 class="navbar-title">The Living Tombstone</h2>
         <ul class="navbar-list">
-            <li class="navbar-item"><a class="navbar-link" href="The_Living_Tombstone.html">Home</a></li>
+            <li class="navbar-item"><a class="navbar-link" href="index.html">Home</a></li>
             <li class="navbar-item"><a class="navbar-link" href="Career.html">Career</a></li>
             <li class="navbar-item"><a class="navbar-link" href="Tracks.html">Tracks</a></li>
+            <li class="navbar-item"><a class="navbar-link" href="Concerts.html">Concerts</a></li>
         </ul>
 
         <div class="navbar-photo"></div>
@@ -82,6 +83,28 @@
         </div>
       </div>
 
+<!-- Модальное окно -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <form id="contactForm">
+            <label for="name">Имя и фамилия:</label><br>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="phone">Номер телефона:</label><br>
+            <input type="tel" id="phone" name="phone" required><br>
+
+            <label for="email">Email:</label><br>
+            <input type="mailto" id="email" name="email" required><br>
+
+            <label for="holiday">Выберите праздник:</label><br>
+            <input type="text" id="holiday" name="holiday" required><br>
+
+            <button type="button" onclick="submitForm()">Отправить</button>
+        </form>
+    </div>
+</div>
+
       <footer>
         <div class="left-column">
             <img class="img-logo" src="css/logo.png" alt="Left Image">
@@ -99,9 +122,10 @@
             <div class="column">
                 <h2 class="footer-title">Navbar</h4>
                 <ul class="footer-list">
-                    <li class="footer-item"><a class="footer-link" href="The_Living_Tombstone.html">Home</a></li>
+                    <li class="footer-item"><a class="footer-link" href="index.html">Home</a></li>
                     <li class="footer-item"><a class="footer-link" href="Career.html">Career</a></li>
                     <li class="footer-item"><a class="footer-link" href="Tracks.html">Tracks</a></li>
+                    <li class="navbar-item"><a class="footer-link" href="Concerts.html">Concerts</a></li>
                 </ul>
             </div>
             <div class="column">
@@ -109,10 +133,13 @@
                 <ul class="footer-list">
                     <li class="footer-item"><a class="footer-link" href="mailto:example@example.com">Email: example@example.com</a></li>
                     <li class="footer-item"><a class="footer-link" href="tel:+1234567890">Number: +1234567890</a></li>
+                    <li class="footer-item"><a class="footer-link" href="#" onclick="openModal()">Contact</a></li>
                 </ul>
             </div>
         </div>
         <div class="bottom-image"></div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="script/script.js"></script>
 </body>
 </html>
