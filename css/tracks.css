@@ -8,6 +8,8 @@ html {
     margin: 0;
     height: 100%;
     width: 100%;
+    -moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
   }
   /* navbar */
 
@@ -111,6 +113,29 @@ html {
     margin-left: 32px;
     box-sizing: border-box;
     display: flex;
+    flex-direction: column;
+
+}
+
+.group-text-container-1 audio {
+    align-self: flex-end; /* Размещает аудио в конце контейнера */
+}
+
+[aria-pressed="true"] {
+   border: 2px solid red;
+   background: #FAFAAE;
+}
+
+[aria-pressed="false"] {
+   border: 2px solid #000;
+}
+
+.visually-hidden { 
+  position: absolute; 
+  overflow: hidden; 
+  clip: rect(0 0 0 0); 
+  height: 1px; width: 1px; 
+  margin: -1px; padding: 0; border: 0; 
 }
 
 .group-text-container-2 {
@@ -126,6 +151,11 @@ html {
     padding-left: 31px;
     box-sizing: border-box;
     display: flex;
+  flex-direction: column;
+}
+
+.group-text-container-2 audio {
+    align-self: flex-end; /* Размещает аудио в конце контейнера */
 }
 
 .group-text-container-3 {
@@ -141,6 +171,11 @@ html {
     padding-left: 116px;
     box-sizing: border-box;
     display: flex;
+  flex-direction: column;
+}
+
+.group-text-container-3 audio {
+    align-self: flex-end; /* Размещает аудио в конце контейнера */
 }
 
 .group-text-container-4 {
@@ -156,6 +191,11 @@ html {
     padding-left: 96px;
     box-sizing: border-box;
     display: flex;
+  flex-direction: column;
+}
+
+.group-text-container-4 audio {
+    align-self: flex-end; /* Размещает аудио в конце контейнера */
 }
 
 .group-text-container-5 {
@@ -171,6 +211,11 @@ html {
     padding-left: 82px;
     box-sizing: border-box;
     display: flex;
+  flex-direction: column;
+}
+
+.group-text-container-5 audio {
+    align-self: flex-end; /* Размещает аудио в конце контейнера */
 }
 
 .group-text-container-6 {
@@ -186,6 +231,11 @@ html {
     padding-left: 30px;
     box-sizing: border-box;
     display: flex;
+  flex-direction: column;
+}
+
+.group-text-container-6 audio {
+    align-self: flex-end; /* Размещает аудио в конце контейнера */
 }
 
 .group-text-container-7{
@@ -201,6 +251,11 @@ html {
     padding-left: 30px;
     box-sizing: border-box;
     display: flex;
+  flex-direction: column;
+}
+
+.group-text-container-7 audio {
+    align-self: flex-end; /* Размещает аудио в конце контейнера */
 }
 
 .group-text-container-8 {
@@ -216,6 +271,11 @@ html {
     padding-left: 50px;
     box-sizing: border-box;
     display: flex;
+  flex-direction: column;
+}
+
+.group-text-container-8 audio {
+    align-self: flex-end; /* Размещает аудио в конце контейнера */
 }
 
 .track {
@@ -234,41 +294,178 @@ html {
 }
 
 /* Стили для модального окна */
-.modal {
+.login-box {
     display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+  }
+  
+  .login-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .login-box .user-box {
+    position: relative;
+  }
+  
+  .login-box .user-box input {
     width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.4);
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    display: flex;  /* Добавлено свойство display: flex; */
-    flex-direction: column;  /* Добавлено свойство flex-direction: column; */
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+  }
+  .login-box .user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+  }
+  
+  .login-box .user-box input:focus ~ label,
+  .login-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+  }
+  
+  .login-box form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #03e9f4;
+    font-size: 16px;
     text-decoration: none;
-    cursor: pointer;
-}
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px
+  }
+  
+  .login-box a:hover {
+    background: #03e9f4;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 100px #03e9f4;
+  }
+  
+  .login-box a span {
+    position: absolute;
+    display: block;
+  }
+  
+  .login-box a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: btn-anim1 1s linear infinite;
+  }
+  
+  @keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+    50%,100% {
+      left: 100%;
+    }
+  }
+  
+  .login-box a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+  }
+  
+  @keyframes btn-anim2 {
+    0% {
+      top: -100%;
+    }
+    50%,100% {
+      top: 100%;
+    }
+  }
+  
+  .login-box a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+  }
+  
+  @keyframes btn-anim3 {
+    0% {
+      right: -100%;
+    }
+    50%,100% {
+      right: 100%;
+    }
+  }
+  
+  .login-box a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+  }
+  
+  @keyframes btn-anim4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,100% {
+      bottom: 100%;
+    }
+  }
+  
+  .close {
+      color: #aaa;
+      float: top;
+      font-size: 28px;
+      font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+  }
 
 /* footer */
 
